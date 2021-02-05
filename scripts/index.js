@@ -9,7 +9,16 @@ const LStorage = {
     },
     set(transactions){
         localStorage.setItem("dev.finances:transactions", JSON.stringify(transactions))
+    },
+
+    setTheme(booleanValue){
+        localStorage.setItem("dev.finances:theme", booleanValue)
+    },
+
+    getTheme(){
+        return JSON.parse(localStorage.getItem("dev.finances:theme")) || false
     }
+    
 }
 
 const Transaction = {//functions to update balance cards
@@ -95,12 +104,32 @@ const DOM = {
         DOM.transactionContainer.innerHTML = ""
     },
 
-    toggleDarkTheme(){
+    toggleDarkTheme(saveIfTrue){
         document.querySelector("body.dark-theme").classList.toggle("on")        
         document.querySelector("main.container section.dark-theme").classList.toggle("on")        
         document.querySelector("#data-table").classList.toggle("on")        
         document.querySelector("div.modal-overlay div.dark-theme").classList.toggle("on")        
-        document.querySelector("footer.dark-theme").classList.toggle("on")        
+        document.querySelector("footer.dark-theme").classList.toggle("on")
+        
+        if(saveIfTrue === true){
+            DOM.saveTheme()
+        }
+    },
+
+    saveTheme(){
+        if(document.querySelector(".toggle").checked){
+            LStorage.setTheme(true)
+        }
+        else{
+            LStorage.setTheme(false)
+        }
+    },
+
+    getInitialTheme(){
+        if(LStorage.getTheme() == true){
+            DOM.toggleDarkTheme(false)
+            document.querySelector(".toggle").checked = true
+        }
     }
 }
 
@@ -214,7 +243,7 @@ const App = {
 
         LStorage.set(Transaction.all)
 
-        DOM.toggleDarkTheme
+        DOM.getInitialTheme()
         
         DOM.updateBalance()
     },
