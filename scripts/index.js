@@ -93,6 +93,14 @@ const DOM = {
 
     clearTransactions(){
         DOM.transactionContainer.innerHTML = ""
+    },
+
+    toggleDarkTheme(){
+        document.querySelector("body.dark-theme").classList.toggle("on")        
+        document.querySelector("main.container section.dark-theme").classList.toggle("on")        
+        document.querySelector("#data-table").classList.toggle("on")        
+        document.querySelector("div.modal-overlay div.dark-theme").classList.toggle("on")        
+        document.querySelector("footer.dark-theme").classList.toggle("on")        
     }
 }
 
@@ -205,6 +213,8 @@ const App = {
         })
 
         LStorage.set(Transaction.all)
+
+        DOM.toggleDarkTheme
         
         DOM.updateBalance()
     },

@@ -1,0 +1,63 @@
+:root{
+    --main-black: #252627;
+    --second-black: #565858;
+}
+
+body.on{
+    background-color: var(--main-black);
+}
+
+
+/* CARDS ======================*/
+section#balance.on div.card:nth-child(2),
+section#balance.on div.card:nth-child(3){
+    background-color: var(--second-black);
+    color: #ffffff;
+
+}
+/* CARDS ======================*/
+
+/* Table ==================== */
+table.on th,
+table.on td:nth-child(1),
+table.on td:nth-child(3),
+table.on td:nth-child(4){
+    background: var(--second-black);
+    color: #fff;
+}
+
+table.on td:nth-child(2){
+    background: var(--second-black);
+}
+
+table.on td.income:nth-child(2){
+    color: #12ca65;
+}
+
+table.on td.expense:nth-child(2){
+    color: #fa3d3d;
+}
+/* Table ==================== */
+
+/*Modal =====================*/
+div.modal.on{
+    background-color: var(--main-black);
+
+}
+
+div.modal.on div h2{
+    color: #fff;
+}
+
+div.modal.on div form div input{
+    background-color: var(--second-black);
+    color: #fff;
+}
+/*Modal =====================*/
+
+
+
+footer.on{
+    color: #ffffff;
+    opacity: 0.9;
+}
