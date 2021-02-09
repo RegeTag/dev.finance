@@ -156,11 +156,20 @@ td.description {
     color: var(--dark-blue);
 }
 
-td.income {
+td.amount small{
+    max-width: 0px;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+td.amount:hover small{
+    opacity: 0.9;
+}
+
+td.income.amount {
     color: #12a454;
 }
 
-td.expense{
+td.expense.amount{
     color: #e92929;
 }
 

@@ -46,8 +46,30 @@
     max-width: 97%;
 }
 
+/*This make the side arrows disapear
+#form form input::-webkit-outer-spin-button,
+#form form input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+} */
+
 .input-group{
     margin-top: 0.8rem;
+}
+#select-currency{
+    display: inline-flex;
+    justify-content: flex-end;
+
+    width: 100%;
+    margin-top: -40px;
+}
+
+#select-currency small{
+    opacity: 0.9;
+    color: black;
+}
+
+#select-currency select.currencys{
+    outline: none;
 }
 
 .input-group.actions{

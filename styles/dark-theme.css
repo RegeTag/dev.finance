@@ -35,7 +35,7 @@ table.on td.income:nth-child(2){
 }
 
 table.on td.expense:nth-child(2){
-    color: #fa3d3d;
+    color: #ff6262;
 }
 /* Table ==================== */
 
@@ -52,6 +52,10 @@ div.modal.on div h2{
 div.modal.on div form div input{
     background-color: var(--second-black);
     color: #fff;
+}
+
+#select-currency .on{
+    color: white;
 }
 /*Modal =====================*/
 

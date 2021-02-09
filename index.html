@@ -20,7 +20,7 @@
     </header>
 
     <main class="container">
-        <section id="balance" class="dark-theme">
+        <section onclick="//console.log('cliked on balance section')" id="balance" class="dark-theme">
             <h2 class="sr-only">Balanço</h2>
 
             <div class="card">
@@ -96,6 +96,15 @@
                         name="amount"
                         placeholder="R$"
                         />
+                        <div id="select-currency">
+                            <label>
+                            <small class="dark-theme">Moeda</small>
+                                <select onchange="Form.placeholderCurrencyChanger()" class="currencys">
+                                    <option id="brl-option" value="BRL" selected>BRL</option>
+                                    <option id="usd-option" value="USD">USD</option>
+                                </select>
+                            </label>
+                        </div>
                     </div>
 
                     <div class="input-group">
@@ -121,10 +130,13 @@
 
     <footer class="dark-theme">
         <h3 class="logo footer">dev.financa$</h3>
+
         <label class="switch">
             <input type="checkbox" class="toggle" onclick="DOM.toggleDarkTheme(true)">
             <span class="slider"></span>
         </label>
+
+        <div id="info"></div>
     </footer>
 
     <script src="./scripts/index.js"></script>
