@@ -93,6 +93,24 @@ header{
     color: var(--dark-blue);
 }
 
+.card.income:hover{
+    border: 2px #53b92d solid;
+    margin-bottom: 1.4rem;
+    transition: 100ms;
+}
+
+.card.expense:hover{
+    border: 2px #c53a3a solid;
+    margin-bottom: 1.4rem;
+    transition: 100ms;
+}
+
+.card.total:hover{
+    border: 2px #fff solid;
+    margin-bottom: 1.4rem;
+    transition: 100ms;
+}
+
 .card h3{
     font-weight: normal;
     font-size: 1rem;
